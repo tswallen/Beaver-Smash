@@ -113,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Read WASD input for movement (no rotation of parent)
         Vector2 input = moveAction.action.ReadValue<Vector2>();
-        Vector3 move = new Vector3(input.y, 0, -input.x); //change axis
+        Vector3 move = new Vector3(input.x, 0, input.y); //change axis
         move = Vector3.ClampMagnitude(move, 1f);
 
         // Movement vector (parent moves, but does NOT rotate)
