@@ -15,6 +15,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (target != null)
         {
+            agent.stoppingDistance = 1f;
             agent.SetDestination(target.position);
         }
     }
